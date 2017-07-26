@@ -12,17 +12,17 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
-        $data = range (1,100);
-        $result = array();
         echo "Números Primos del 1 al 100: ", "<br>";
         echo "1","<br>";
-        for ($i = 2; $i<=count($data);$i++){
-            for ($j = 1; $j<=count($data);$j++){
-                if($i%$j == 0){
-                    $result($j) = $j;
+        for ($i = 2; $i<=100;$i++){
+             $count = 0;
+            for ($j = 1; $j<=100 && $count<=2;$j++){
+                if(($i%$j) == 0){
+                    $count+=1;
+                    $result[$j] = $j;
                 }
             }
-            if(count($result)==2 && $result(1) == 1 && $result($i)==$i){
+            if($count==2){
                 echo $i,"<br>";
             }
         }
